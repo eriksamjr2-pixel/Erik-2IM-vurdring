@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   padding: 10%;
-  background-color: rgb(225, 187, 160);
+  background-color: rgb(157, 157, 157);
 }
 
 /* Hver col*-klasse holder et kort/box sentrert i sin celle */
@@ -72,10 +72,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Justering: gjør bilder mindre og øker avstand mellom kortene */
+/* Justering: større mellomrom mellom kort og mindre bokser/bilder */
 :root {
-  /* enkel variabel for gap mellom kort */
-  --card-gap: 2rem; /* større gap mellom kortene */
+  /* øker gap mellom kort for mer luft */
+  --card-gap: 4rem; /* økt for mer avstand mellom boksene */
+  /* gjør bildene mindre for å unngå scrolling */
+  --card-img-height: 180px; /* redusert høyde på bilder */
 }
 
 /* Gjør rader responsive: bruk flex-wrap for å få 2 rader med 3 kolonner */
@@ -86,10 +88,11 @@
   justify-content: center;
 }
 
-/* Hver "col" tar omtrent én tredjedel av bredden, men trekkes litt fra for avstand */
+/* Hver "col" tar litt mindre enn en tredjedel for å gi mer luft mellom boksene */
 .topmidcontainer .row > div {
-  flex: 0 0 calc(33.333% - var(--card-gap));
-  max-width: calc(33.333% - var(--card-gap));
+  /* gir hver kolonne ca 30% av bredden og trekker fra gap så de ikke går utenfor */
+  flex: 0 0 calc(30% - calc(var(--card-gap) / 3));
+  max-width: calc(30% - calc(var(--card-gap) / 3));
   box-sizing: border-box;
 }
 
@@ -102,12 +105,14 @@
   background: #fff;
   display: flex;
   flex-direction: column;
+  /* litt intern padding for bedre visuell avstand i boksen */
+  margin: 0;
 }
 
-/* Endret: reduserer høyden på bildene med ca. 30% (fra 500px -> 350px) */
+/* Bilde størrelse i kortet — bruker CSS-variabel for enkel justering */
 .topmidcontainer .card-img-top {
   width: 100%;
-  height: 350px; /* mindre høyde for å unngå vertikal rulling */
+  height: 300px; /* bruker variabel: mindre bilder */
   object-fit: cover;
   display: block;
 }
@@ -128,11 +133,11 @@
 /* Mobil: 2 kolonner under 768px — behold god avstand også på mobil */
 @media (max-width: 768px) {
   .topmidcontainer .row > div {
-    flex: 0 0 calc(50% - calc(var(--card-gap) / 2));
-    max-width: calc(50% - calc(var(--card-gap) / 2));
+    flex: 0 0 calc(50% - calc(var(--card-gap) / 4));
+    max-width: calc(50% - calc(var(--card-gap) / 4));
   }
   /* kortere bilder på mobil for bedre visning */
   .topmidcontainer .card-img-top {
-    height: 140px;
+    height: 140px; /* litt mindre på mobil */
   }
 }
