@@ -27,7 +27,10 @@
   padding: 10%;
   background-color: rgb(157, 157, 157);
 }
-.midmen
+.midmenu {
+  justify-content: center;
+  align-items: center;
+}
 /* Hver col*-klasse holder et kort/box sentrert i sin celle */
 .col1,
 .col2,
