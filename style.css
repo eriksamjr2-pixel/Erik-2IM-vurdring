@@ -1,7 +1,19 @@
-"topflexcontainer" {
+.body {
+  background-color: white;
+}
+.topcontainer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
+  padding: 10%;
+  background-color: rgb(225, 187, 160);
+}
+.midcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  background-color: rgb(225, 187, 160);
 }
