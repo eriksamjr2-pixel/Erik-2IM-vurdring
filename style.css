@@ -6,10 +6,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10%;
+  padding: 1%;
   background-color: rgb(225, 187, 160);
 }
 .midcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  background-color: rgb(225, 187, 160);
+}
+.bottomcontainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
