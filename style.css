@@ -1,11 +1,7 @@
-topflex-container {
+"topflexcontainer" {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-}
-topflex1 {
-  background-color: lightblue;
-  padding: 20px;
-  margin: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
 }
