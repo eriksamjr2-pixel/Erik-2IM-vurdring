@@ -72,18 +72,24 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Justering: gjør bilder mindre og øker avstand mellom kortene */
+:root {
+  /* enkel variabel for gap mellom kort */
+  --card-gap: 2rem; /* større gap mellom kortene */
+}
+
 /* Gjør rader responsive: bruk flex-wrap for å få 2 rader med 3 kolonner */
 .topmidcontainer .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--card-gap); /* bruker variabel for lett justering */
   justify-content: center;
 }
 
-/* Hver "col" tar en tredjedel av bredden (minus gap) for like store bilder */
+/* Hver "col" tar omtrent én tredjedel av bredden, men trekkes litt fra for avstand */
 .topmidcontainer .row > div {
-  flex: 0 0 calc(33.333% - 1rem);
-  max-width: calc(33.333% - 1rem);
+  flex: 0 0 calc(33.333% - var(--card-gap));
+  max-width: calc(33.333% - var(--card-gap));
   box-sizing: border-box;
 }
 
@@ -98,10 +104,10 @@
   flex-direction: column;
 }
 
-/* Bilde størrelse i kortet — setter fast høyde slik at alle blir like store */
+/* Endret: reduserer høyden på bildene med ca. 30% (fra 500px -> 350px) */
 .topmidcontainer .card-img-top {
   width: 100%;
-  height: 160px; /* juster høyde ved behov; sørger for like proporsjoner */
+  height: 350px; /* mindre høyde for å unngå vertikal rulling */
   object-fit: cover;
   display: block;
 }
@@ -119,11 +125,11 @@
   min-width: 100px;
 }
 
-/* Mobil: 2 kolonner under 768px — endrer col-bredde for mindre skjermer */
+/* Mobil: 2 kolonner under 768px — behold god avstand også på mobil */
 @media (max-width: 768px) {
   .topmidcontainer .row > div {
-    flex: 0 0 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+    flex: 0 0 calc(50% - calc(var(--card-gap) / 2));
+    max-width: calc(50% - calc(var(--card-gap) / 2));
   }
   /* kortere bilder på mobil for bedre visning */
   .topmidcontainer .card-img-top {
