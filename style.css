@@ -1,22 +1,20 @@
-.body {
-  background-color: white;
-}
 .topcontainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 1%;
-  background-color: rgb(225, 187, 160);
+  background-color: rgb(32, 32, 32);
 }
-.midcontainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10%;
-  background-color: rgb(225, 187, 160);
+.overskrift {
+  align-items: left;
+  text-align: left;
+  font-family: "Arial Black", sans-serif;
+  font-size: 20px;
+  padding-right: 30%;
+  color: rgb(255, 255, 255);
 }
+
 .bottomcontainer {
   display: flex;
   flex-direction: row;

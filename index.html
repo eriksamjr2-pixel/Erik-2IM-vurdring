@@ -14,48 +14,72 @@
     <!--i koden over linker jeg både bootstrap og stylesheet'en min til html siden-->
   </head>
   <body>
-    <h1>Vurderings siden</h1>
-    <!--legger til en h1 overskrift altså et header element-->
-    <p>dette er en test for å vise kompetanse innenfor webutvikling</p>
-    <!--legger til et avsnitt-->
+    <div class="topcontainer">
+      <!--lager en flexcontainer som skal være på toppen av siden-->
+      <div class="overskrift">
+        <h1>Vurderings siden</h1>
+        <!--legger til en h1 overskrift altså et header element-->
+        <p>dette er en test for å vise kompetanse innenfor webutvikling</p>
+        <!--legger til et avsnitt-->
+      </div>
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="#">side1</a></li>
+    <li><a class="dropdown-item active" href="#">side2</a></li>
+    <li><a class="dropdown-item active" href="#">side3</a></li>
+  </ul>
+</div>
+            <!--lager en dropdown meny med bootstrap klasser-->
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
     <!--linker bootstrap sitt javascript til html siden-->
-    <div class="topcontainer">
-      <div>
-        topflex1
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-      </div>
-      <div>topflex2</div>
-      <div>topflex3</div>
+
+   <div class="topmidcontainer">
+  <div class="row">
+    <div class="col">
+      <img src="10619.jpg" alt="Girl in a jacket">
     </div>
-    <div class="midcontainer">
-      <div>midflex1</div>
-      <div>midflex2</div>
-      <div>midflex3</div>
+    <div class="col">
+      Column
     </div>
-    <div class="bottomcontainer">
-      <div>bottomflex1</div>
-      <div>bottomflex2</div>
-      <div>bottomflex3</div>
+    <div class="col">
+      Column
     </div>
-    <!--lager en flexcontainer som skal være på toppen av siden-->
-  </body>
-</html>
+  </div>
+</div>
+<div class="midmidcontainer">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+<div class="bottommidcontainer">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+    </div>
