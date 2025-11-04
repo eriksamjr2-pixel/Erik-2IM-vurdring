@@ -23,7 +23,48 @@
   padding: 10%;
   background-color: rgb(225, 187, 160);
 }
-
+.col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+.col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+.col3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+.col4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+.col5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+.col6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
 .topmidcontainer {
   display: flex;
   flex-direction: column;
@@ -47,4 +88,62 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gjør rader responsive: 3 kolonner per rad */
+.topmidcontainer .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Hver "col" tar en tredjedel av bredden (minus gap) */
+.topmidcontainer .row > div {
+  flex: 0 0 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  box-sizing: border-box;
+}
+
+/* Kort / box rundt hvert bilde + knapp */
+.topmidcontainer .image-card {
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bilde størrelse i kortet */
+.topmidcontainer .card-img-top {
+  width: 100%;
+  height: 600px; /* juster høyde ved behov */
+  object-fit: cover;
+  display: block;
+}
+
+/* Sentrer knapp i feltet under bildet */
+.topmidcontainer .card-body {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sørg for at knapp får litt plass og er full bredde hvis ønskelig */
+.topmidcontainer .card-body .btn {
+  min-width: 100px;
+}
+
+/* Mobil: 2 kolonner under 768px */
+@media (max-width: 768px) {
+  .topmidcontainer .row > div {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+  .topmidcontainer .card-img-top {
+    height: 140px;
+  }
 }
